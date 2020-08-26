@@ -5,6 +5,8 @@ import tensorflow as tf
 
 
 def process_names(raw_names):
+    """ Processes the names to be used as inputs for the model. Spaces are
+    changed by 0, hyphens by 1 and end of names are delimited by 2 """
     names = []
     for name in raw_names:
         name = name.lower()
@@ -18,7 +20,7 @@ def process_names(raw_names):
 
 
 def load_tokenizer(names):
-    names = process_names(raw_names)
+    """ Creates a tokenizer and tokenizes the names. """
     tokenizer = tf.keras.preprocessing.text.Tokenizer(num_words=43)
     for name in names:
         tokenizer.fit_on_texts(list(name))
@@ -26,6 +28,7 @@ def load_tokenizer(names):
 
 
 def build_name(out_name):
+    """ Transforms output of the model into names. """
     name = []
     for c in out_name:
         if c == '0':
@@ -39,6 +42,7 @@ def build_name(out_name):
 
 
 def generate_name(tokenizer, input_name=''):
+    """ Given a sequence of characters, computes its continuation using the trained model. """
     while True:
         gen_name = input_name
         gen_name = gen_name.lower()
@@ -62,6 +66,7 @@ def generate_name(tokenizer, input_name=''):
 
 if __name__ == '__main__':
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
     model = tf.keras.models.load_model('model/model.h5')
     data = pd.read_csv('data/Tolkien_characters.csv')
     raw_names = data['Name'].to_list()
