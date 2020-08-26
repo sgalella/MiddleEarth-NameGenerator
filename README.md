@@ -1,6 +1,9 @@
 # Middle-Earth Name Generator
 Neural network to generate new character names from Middle-earth. 
 
+<p align="center">
+    <img width="622" height="438" src="images/name_generator.gif">
+</p>
 
 
 
