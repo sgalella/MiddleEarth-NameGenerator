@@ -1,0 +1,9 @@
+name: tolkien-name-generator
+dependencies:
+  - python=3.6
+  - jupyterlab
+  - pip
+  - pip:
+    - numpy==1.18.2
+    - pandas==1.0.3
+    - tensorflow==2.3.0
