@@ -18,9 +18,23 @@ The list was extended with alternative names given to some characters – `Other
 
 ## Installation
 The code was tested using Python 3.6.10. To install the necessary packages run:
+
 ```bash
 pip install -r requirements.txt
 ```
+
+If using Conda, you can also create an environment with the requirements:
+
+```bash
+conda env create -f environment.yml
+```
+
+By default the environment name is `tolkien-name-generator`. To activate it run:
+
+```bash
+conda activate tolkien-name-generator
+```
+
 
 
 
