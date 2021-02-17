@@ -1,4 +1,4 @@
-name: tolkien-name-generator
+name: middle-earth-name-generator
 dependencies:
   - python=3.6
   - jupyterlab

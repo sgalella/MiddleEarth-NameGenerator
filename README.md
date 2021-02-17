@@ -29,10 +29,10 @@ If using Conda, you can also create an environment with the requirements:
 conda env create -f environment.yml
 ```
 
-By default the environment name is `tolkien-name-generator`. To activate it run:
+By default the environment name is `middle-earth-name-generator`. To activate it run:
 
 ```bash
-conda activate tolkien-name-generator
+conda activate middle-earth-name-generator
 ```
 
 
@@ -42,6 +42,6 @@ conda activate tolkien-name-generator
 
 Run the program file from command line as:
 ```bash
-python tolkien_name_generator.py
+python middle_earth_name_generator.py
 ````
 For more information about the model, check `notebooks/`.
